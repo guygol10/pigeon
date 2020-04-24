@@ -1,0 +1,170 @@
+/*### Defult style #####*/
+body html {
+    margin: 0;
+    padding: 0;
+    font-family: arial;
+    background-color: #F5F5F5;
+}
+
+/*#### Navbar style #####*/
+.nav-link {
+    font-size: 20px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+/*#### Index style #####*/
+.brandImg {
+    width: 150px;
+}
+
+.imgTextTitle {
+    margin-top: -400px;
+    font-size: 70px;
+    text-align: center;
+    color: #fff;
+}
+
+.imgTextMid {
+    text-align: center;
+    padding-bottom: 225px;
+    color: #fff;
+}
+
+/*#### About style #####*/
+.paraStyle {
+    text-align: justify;
+    margin: 0 70px;
+    font-size: 22px;
+    line-height: 1.5;
+}
+
+.aboutSection {
+    margin-top: 20px;
+}
+
+.ReadMoreBtn {
+    text-align: center;
+    padding: 10px 20px;
+    background-color: #000084;
+    border-radius: 7px;
+    border: none;
+    margin-bottom: 20px;
+    font-size: 20px
+}
+
+.ReadMoreBtn a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/*#### Info style #####*/
+.infoSection {
+    margin: 10px 70px;
+    line-height: 2;
+    font-size: 22px;
+
+}
+
+.sectionLinks {
+    font-size: 22p
+}
+
+/*#### photo style #####*/
+.photoSection {
+    margin: 10px 0 10px 200px;
+}
+
+.img-fluid {
+    margin: 10px 5px;
+}
+
+/*#### video style #####*/
+.videoSection {
+    margin: 10px 0 10px 70px;
+}
+
+.videoSection iframe {
+    margin: 1 0px 5px;
+}
+
+/*#### contant style #####*/
+.card {
+    margin-top: 20px;
+    margin: 20px 0 30px 450px;
+    box-shadow: 2px 10px 2px 0px black;
+    width: 350px;
+    border-radius: 5px;
+}
+
+/*#### Footer style #####*/
+.footer {
+    display: block position: absolute;
+    background-color: #585757;
+    font-size: 22px;
+    color: white;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+
+.textFooter {
+    padding-top: 10px;
+}
+
+.fab {
+    font-size: 26px;
+}
+
+.fa-facebook {
+    color: #0000FF;
+}
+
+.fa-instagram {
+    color: #ff7d00
+}
+
+.fa-github-alt {
+    color: #000000;
+}
+
+.fa-linkedin-in {
+    color: #fFF;
+}
+
+/*#### back to top style #####*/
+#back-to-top-btn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 26px;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    color: #000000;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid #333;
+    border-radius: 50%;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-property: background-color, color;
+}
+
+#back-to-top-btn:hover,
+#back-to-top-btn:focus {
+    background-color: #333;
+    color: #575151;
+    border: 3px solid #000000;
+}
+
+/* back to top Animations */
+.btnEntrance {
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-name: btnEntrance;
+}
+

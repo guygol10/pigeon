@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap-grid.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="CSS/styles.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="fontawesome-free-5.11.2-web/css/all.min.css">
+
+    <title>Pigeon</title>
+</head>
+
+<body>
+    <!-- navbar -->
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="index.html"><img class="brandImg"
+                        src="Images/LogoSample_ByTailorBrands__2_-removebg-preview-removebg-preview.png"
+                        alt="Pigeon`s logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="info.html">Information</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="photo_gallery.html">Photo gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="video_gallery.html">Video gallary</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contant.html">Contant</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- body page -->
+    <section>
+        <div>
+            <img src="images/pigeon-747462_1280.jpg">
+            <h1 class="imgTextTitle">Pigeon</h1>
+            <h1 class="imgTextMid">Save the pigeons</h1>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <h4 class="textFooter">Powred by guygol10</h4>
+        <i class="fas fa-car-alt fa-4x   "></i>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-github-alt"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+    </footer>
+
+    <!-- back to top -->
+    <button id="back-to-top-btn"><i class="fas fa-angle-double-up"> </i></button>
+
+    <script>
+        const backToTopButton = document.querySelector("#back-to-top-btn");
+
+        window.addEventListener("scroll", scrollFunction);
+
+        function scrollFunction() {
+            if (window.pageYOffset > 300) { // Show backToTopButton
+                if (!backToTopButton.classList.contains("btnEntrance")) {
+                    backToTopButton.classList.remove("btnExit");
+                    backToTopButton.classList.add("btnEntrance");
+                    backToTopButton.style.display = "block";
+                }
+            } else { // Hide backToTopButton
+                if (backToTopButton.classList.contains("btnEntrance")) {
+                    backToTopButton.classList.remove("btnEntrance");
+                    backToTopButton.classList.add("btnExit");
+                    setTimeout(function () {
+                        backToTopButton.style.display = "none";
+                    }, 250);
+                }
+            }
+        }
+
+        backToTopButton.addEventListener("click", smoothScrollBackToTop);
+
+        // function backToTop() {
+        //   window.scrollTo(0, 0);
+        // }
+
+        function smoothScrollBackToTop() {
+            const targetPosition = 0;
+            const startPosition = window.pageYOffset;
+            const distance = targetPosition - startPosition;
+            const duration = 750;
+            let start = null;
+
+            window.requestAnimationFrame(step);
+
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = timestamp - start;
+                window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
+                if (progress < duration) window.requestAnimationFrame(step);
+            }
+        }
+
+        function easeInOutCubic(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t * t + b;
+            t -= 2;
+            return c / 2 * (t * t * t + 2) + b;
+        };
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
